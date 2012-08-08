@@ -1,0 +1,12 @@
+def set_plot_parameters(mpl):
+    mpl.rc('axes', titlesize=8)
+    mpl.rc('axes', labelsize=8)
+    mpl.rc('xtick', labelsize=7)
+    mpl.rc('ytick', labelsize=7)
+    mpl.rc('xtick.major', size=2)
+    mpl.rc('ytick.major', size=2)
+    mpl.rc('xtick.minor', size=1)
+    mpl.rc('ytick.minor', size=1)
+    mpl.rc('font', family='serif')
+    mpl.rc('axes', linewidth=0.5)
+    mpl.rc('patch', linewidth=0.5)

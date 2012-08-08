@@ -1,0 +1,81 @@
+About
+=====
+
+This directory contains all the scripts and input files required to
+reproduce the results in:
+
+    A self-consistent model of Galactic stellar and dust infrared
+    emission and the abundance of polycyclic aromatic hydrocarbons
+
+                       Robitaille et al., 2012
+
+            http://dx.doi.org/10.1051/0004-6361/201219073
+
+Requirements
+============
+
+The scripts require the following packages to be installed:
+
+* Python 2.7.3 (http://www.python.org)
+* Numpy 1.6.2 (http://www.numpy.org)
+* Matplotlib 1.1.0 (http://matplotlib.sourceforge.net)
+* Hyperion 0.9.0 (http://www.hyperion-rt.org)
+* ATpy 0.9.6 (http://atpy.github.com)
+* PyFITS 3.0.7 (http://www.stsci.edu/institute/software_hardware)
+* PyWCS 1.11-4.8.4 (https://trac.assembla.com/astrolib/)
+* APLpy 0.9.8 (http://aplpy.github.com/)
+* Python Imaging Library 1.1.7 (http://www.pythonware.com/products/pil/)
+* h5py 2.0.1 (http://code.google.com/p/h5py/)
+
+The scripts may work with previous or future versions of these
+dependencies, but the versions indicated are those used for the
+published results.
+
+Instructions
+============
+
+The 'SKY/' directory contains the scripts used to produce the SKY model
+for the stellar populations. The 'scripts/' directory contain the
+scripts to set up, run, and post-process the radiative transfer model.
+To run all the scripts in the right order, simply run:
+
+    ./do.sh
+
+in the top-level directory. The final models will be placed in a
+directory called 'models/' and the plots will be placed in a directory
+called 'plots/'. Note that if these directories exist, they will be
+emptied before running the models.
+
+Note that by default, the models will be run with 12 processes. If you
+have fewer or more than 12 cores, you can change this by editing the
+following line in scripts/run_all.py:
+
+    os.system('hyperion -m 12 ...
+
+to:
+
+    os.system('hyperion -m NPROC ...
+
+where NPROC is the number of processes you want to use.
+
+If you want to find the variances between the models and the data, you
+can run:
+
+    python scripts/fit_profiles.py
+
+Online repository
+=================
+
+The latest version of these files can be accessed at:
+
+    https://github.com/hyperion-rt/paper-galaxy-rt-model
+
+The tar file included with the paper is the version of the scripts used
+for the published results, while the online repository may contain minor
+fixes and improvements for anyone interested in using and expanding this
+work.
+
+Contact
+=======
+
+For any questions, please contact Thomas Robitaille <robitaille@mpia.de>

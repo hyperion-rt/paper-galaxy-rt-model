@@ -1,0 +1,19 @@
+About
+=====
+
+The 'profiles/' directory contains the observed surface brightness
+profiles for the sources in the GLIMPSE point source Archive. The
+different bands are indicated by a two character code:
+
+    I1 = IRAC 3.6 microns
+    I2 = IRAC 4.5 microns
+    I3 = IRAC 5.8 microns
+    I4 = IRAC 8.0 microns
+    
+Each file contains the longitude in degrees, followed by the surface
+brightness in MJy/sr.
+
+Contact
+=======
+
+For any questions, please contact Thomas Robitaille <robitaille@mpia.de>
